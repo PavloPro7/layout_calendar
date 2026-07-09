@@ -39,7 +39,7 @@ body {
   }
 
   @for $number from 1 through 31 {
-    &__day--#{$number}::before {
+    &__day:nth-child(#{$number})::before {
       content: '#{$number}';
       font-family: Arial, sans-serif;
       font-size: 30px;
@@ -52,7 +52,7 @@ body {
 
   @each $day-of-week in $days-of-week {
     &--start-day-#{$day-of-week} {
-      .calendar__day--1 {
+      .calendar__day:nth-child(1) {
         margin-left: ($day-width + $gap) * $i;
       }
     }
